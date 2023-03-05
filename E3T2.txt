@@ -1,0 +1,9 @@
+1.What findings were detected related to the brute force attack?
+- UnauthorizedAccess:EC2/SSHBruteForce:
+    i-0440b7d1e4a1d62f9 is performing SSH brute force attacks against 3.213.23.72. 
+    Brute force attacks are used to gain unauthorized access to instance by guessing the SSH password. 
+3.Research the AWS Guard Duty documentation page and explain how GuardDuty may have detected this attack - i.e. what was its source of information?
+- Based on AWS Flow Logs: 
+    GuardDuty can analyze AWS Flow Logs to identify patterns of network traffic that indicate a potential brute force attack. 
+    If there is a sudden increase in network traffic to an EC2 instance from a specific IP address or a range of IP addresses, 
+    this may indicate an attacker attempting to gain unauthorized access.

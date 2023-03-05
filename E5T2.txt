@@ -1,0 +1,12 @@
+Scan infrastructure as code templates:
+    - Checkov Opensource
+    - Example compliance violation or vulnerability: Checkov scans for compliance with common industry standards such as the Center for Internet Security (CIS) 
+    and Amazon Web Services (AWS) Foundations Benchmark.
+
+Scan AMI’s or containers for OS vulnerabilities:
+    - AWS Inspector
+    - Example compliance violation or vulnerability: Inspector may find that an EC2 instance has an outdated version of OpenSSL installed
+
+Scan an AWS environment for cloud configuration vulnerabilities:
+    - AWS Config
+    - Example compliance violation or vulnerability: AWS Config can identify S3 Buckets that have public access enabled, which could lead to unauthorized access or data leaks.

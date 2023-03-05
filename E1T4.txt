@@ -1,0 +1,8 @@
+1.Untrusted subnet: The scenario mentions that scripts simulating an attack will be run from a separate instance that is in an untrusted subnet. 
+    This means that the attacker is already inside the network and can potentially bypass perimeter security measures. 
+    To mitigate this risk, network segmentation should be used to isolate critical resources, such as the web application server and the S3 buckets, from the untrusted subnet. 
+    Additionally, security groups and network ACLs should be configured to restrict inbound and outbound traffic to only necessary ports and protocols.
+2.Public-facing web service: The public-facing web service is hosted by an HTTP load balancer listening on port 80. 
+    However, there is no mention of any security measures being put in place to protect against common web application attacks such as SQL injection, 
+    cross-site scripting (XSS), or cross-site request forgery (CSRF). 
+    To mitigate these risks, the web service should be configured with appropriate security measures, such as input validation, output encoding, and use of secure cookies.

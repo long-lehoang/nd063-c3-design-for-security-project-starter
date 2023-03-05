@@ -1,0 +1,13 @@
+1.What additional architectural change can be made to reduce the internet-facing attack surface of the web application instance.
+- Change security groups
+- Restrict Permission (only read access) on Attack Instance
+- Disable Password Authentication
+2.Assuming the IAM permissions for the S3 bucket are still insecure, would creating VPC private endpoints for S3 prevent the unauthorized access to the secrets bucket.
+- Yes, we can use VPC private endpoints for S3 and attach policy to prevent the unauthorized access to the secrets bucket.
+3.Will applying default encryption setting to the s3 buckets encrypt the data that already exists?
+- When we apply a default encryption setting to an S3 bucket, it only applies to new objects uploaded to the bucket. 
+  Any existing objects in the bucket will remain unencrypted until they are re-uploaded or updated.
+4.The changes you made above were done through the console or CLI; describe the outcome if the original cloud formation templates are applied to this environment?
+- Prevent copy from the secret bucket (restrict permission to s3)
+- Prevent brute-force attacks on web instances (disable password authentication)
+- Prevent access to web instance (update network traffic to instance)

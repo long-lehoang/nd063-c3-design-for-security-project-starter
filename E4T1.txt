@@ -1,0 +1,14 @@
+1. Identify 2-3 changes that can be made to our environment to prevent an SSH brute force attack from the internet:
+    a. Use network security groups to restrict access - We can use network security groups to restrict access to our AWS resources. 
+    By limiting access to only the necessary ports and IP ranges, we can reduce the attack surface and prevent attackers from launching brute force attacks.
+
+    b. Implement AWS WAF - AWS WAF provides a web application firewall that can protect our applications from brute force attacks. 
+    We can use AWS WAF to block requests that match certain patterns, such as multiple failed login attempts from the same IP address.
+
+    c. Monitor our environment with AWS GuardDuty - AWS GuardDuty can detect and alert us to potential brute force attacks in real-time. 
+    By monitoring our environment with GuardDuty, we can quickly identify and respond to any malicious activity.
+
+2. Neither instance should have had access to the secret recipes bucket; 
+even in the instance that API credentials were compromised how could we have prevented access to sensitive data?
+    Use encryption - Use server-side encryption to encrypt the contents of the secret recipes bucket. 
+    By encrypting the data, even if an attacker gains access to the bucket, they will not be able to read the contents without the encryption key.
